@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeForm</title>
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- SwiperJS css-file -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+<body>
+
+    <!-- Swiper -->
+   
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="form-container welcome-screen">
+              <fieldset>
+                <img src="src/img/Welcome.svg" alt="" >
+              </fieldset>
+              <button type="submit" class="btn btn-start">START</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="form-container">
+              <fieldset>
+                <legend>Write Your Name & Surname.</legend>
+                <input type="text" placeholder="Your Name..." required>
+              </fieldset>
+              <button type="submit" class="btn">OK</button>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="form-container">
+              <fieldset>
+                <legend>Write Your Email.</legend>
+                <input type="email" placeholder="Your Email..." required>
+              </fieldset>
+              <button type="submit" class="btn">OK</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="form-container">
+              <fieldset>
+                <legend>Write Your Password.</legend>
+                <input type="password" value="1234567890" placeholder="Your Password" required>
+              </fieldset>
+              <button type="submit" class="btn">OK</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="form-container">
+              <fieldset>
+                <legend>Write Your Number.</legend>
+                <input type="text" pattern="[0-9]{2} [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="01 (555) 555 55 55" required>
+              </fieldset>
+              <button type="submit" class="btn">OK</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="form-container">
+              <fieldset>
+                <legend>Write Your Message.</legend>
+                <textarea minlength="20" cols="30" rows="8" placeholder="Your Message..." required></textarea>
+              </fieldset>
+              <button type="submit" class="btn">OK</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="form-container">
+              <fieldset>
+                <legend>Do you have a blog site?</legend>
+                <label class="radio">
+                  <input type="radio" required name="gender" value="yes">
+                  <span class="text">
+                    <span class="key">A</span>
+                    YES
+                  </span>
+                </label>
+                <label class="radio">
+                  <input type="radio" required name="gender" value="no">
+                  <span class="text">
+                    <span class="key">B</span>
+                    NO
+                  </span>
+                </label>
+              </fieldset>
+              <button type="submit" class="btn">OK</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="form-container">
+              <fieldset>
+                <legend>What Is Your Gender?</legend>
+                <select name="gender" required>
+                  <option value="">Choose</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="other">Other</option>
+                </select>
+              </fieldset>
+              <button type="submit" class="btn">OK</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="form-container">
+              <fieldset>
+                <legend>Upload A Photo.</legend>
+                <label class="upload-file">
+                  <input type="file" required>
+                  <span class="text" data-invalid="Click to upload a photo." data-valid="File selected successfully"></span>
+                </label>
+              </fieldset>
+              <button type="submit" class="btn">OK</button>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="form-container end-screen">
+              <fieldset>
+                <img src="src/img/Thank-you.svg" alt="" >
+              </fieldset>
+              <h3 class="tnx-title">THANK YOU</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+
+    <!-- SwiperJS js-file -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>

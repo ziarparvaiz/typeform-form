@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  -webkit-overflow-scrolling: touch; }
+
+/* ----- Vairables */
+/* Colors */
+/* Font, Label-Font-size, Placeholder-Font-size, Button-Font-size */
+/* / Vairables */
+html,
+body {
+  height: 100%;
+  background-color: #111927;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+.swiper-container {
+  width: 100%;
+  height: 100vh; }
+  .swiper-container .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .swiper-container .form-container {
+    width: 55%;
+    margin: 0 auto; }
+    @media only screen and (max-width: 992px) {
+      .swiper-container .form-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 15px; } }
+    .swiper-container .form-container .btn {
+      font-size: 20px;
+      font-weight: 500;
+      height: 45px;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.5);
+      transition: 330ms all;
+      padding: 0 50px;
+      background-color: #192231;
+      color: #9fef00;
+      border: 1px solid #a4b1cd;
+      border-radius: 5px; }
+    .swiper-container .form-container .btn-start {
+      font-size: 28px;
+      padding: 0 50px;
+      background-color: #9fef00;
+      color: #192231;
+      border: 1px solid #a4b1cd;
+      border-radius: 5px;
+      letter-spacing: 5px; }
+      .swiper-container .form-container .btn-start:hover {
+        background-color: #192231;
+        color: #9fef00; }
+    .swiper-container .form-container fieldset {
+      padding-bottom: 20px; }
+      .swiper-container .form-container fieldset legend {
+        font-size: 30px;
+        color: #ffffff;
+        padding-bottom: 15px; }
+      .swiper-container .form-container fieldset textarea,
+      .swiper-container .form-container fieldset select,
+      .swiper-container .form-container fieldset input {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        color: #ffffff;
+        border-bottom: 1px solid #a4b1cd;
+        font-size: 20px;
+        padding: 0 15px 0 15px; }
+        .swiper-container .form-container fieldset textarea:focus,
+        .swiper-container .form-container fieldset select:focus,
+        .swiper-container .form-container fieldset input:focus {
+          border-bottom: 1px solid #ffffff; }
+      .swiper-container .form-container fieldset:valid + button {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1); }
+      .swiper-container .form-container fieldset input[type="password"] {
+        color: #9fef00; }
+      .swiper-container .form-container fieldset textarea {
+        height: auto;
+        resize: none; }
+      .swiper-container .form-container fieldset select {
+        appearance: none;
+        cursor: pointer;
+        background: url(../img/icons/down-arrow.svg) no-repeat calc(100% - 15px); }
+        .swiper-container .form-container fieldset select:focus {
+          background-color: #111927;
+          color: #ffffff; }
+      .swiper-container .form-container fieldset .upload-file .text {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 3px;
+        margin-bottom: 10px;
+        padding: 0 14px;
+        cursor: pointer;
+        font-size: 20px; }
+        .swiper-container .form-container fieldset .upload-file .text:hover {
+          border-color: #fff; }
+        .swiper-container .form-container fieldset .upload-file .text::before {
+          content: attr(data-invalid); }
+      .swiper-container .form-container fieldset .upload-file input {
+        display: none; }
+        .swiper-container .form-container fieldset .upload-file input:valid + .text {
+          border-color: #9fef00;
+          background: url(../img/icons/checked.svg) no-repeat calc(100% - 15px) rgba(159, 239, 0, 0.1);
+          background-size: 25px; }
+          .swiper-container .form-container fieldset .upload-file input:valid + .text::before {
+            content: attr(data-valid); }
+      .swiper-container .form-container fieldset .radio .text {
+        display: flex;
+        height: 50px;
+        background-color: #111927;
+        color: #ffffff;
+        margin-bottom: 15px;
+        align-items: center;
+        border: 1px solid #a4b1cd;
+        border-radius: 3px;
+        cursor: pointer;
+        align-items: center;
+        padding: 0 7px;
+        font-size: 20px; }
+        .swiper-container .form-container fieldset .radio .text .key {
+          width: 36px;
+          height: 36px;
+          background-color: #192231;
+          border: 1px solid #a4b1cd;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px; }
+      .swiper-container .form-container fieldset .radio input {
+        display: none; }
+        .swiper-container .form-container fieldset .radio input:checked + .text {
+          border-color: #9fef00;
+          background: rgba(159, 239, 0, 0.1); }
+          .swiper-container .form-container fieldset .radio input:checked + .text .key {
+            border-color: #9fef00; }
+
+.welcome-screen,
+.end-screen {
+  text-align: center; }
+  .welcome-screen img,
+  .end-screen img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 50px; }
+  .welcome-screen h3,
+  .end-screen h3 {
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: 400; }
+
+@media (max-width: 500px) {
+  .form-container {
+    max-width: 450px; } }

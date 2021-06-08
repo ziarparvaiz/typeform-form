@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ----- Vairables */
+
+/* Colors */
+$background-color: #111927;
+$dark: #18191a;
+$dark-blue: #192231;
+$white: #ffffff;
+$success: #9fef00;
+$primary: #0086ff;
+$danger: #ff3e3e;
+$warning: #ffaf00;
+$info: #8f5fe8;
+$border-color: #a4b1cd;
+$placeholder: #a4b1cd;
+
+/* Font, Label-Font-size, Placeholder-Font-size, Button-Font-size */
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+$legend-font-size: 30px;
+$legend-color: #ffffff;
+$placeholder-font-size: 20px;
+$button-font-size: 20px;
+$radio-font-size: 20px;
+$button-bg: #192231;
+$bg-start-button: #9fef00;
+
+/* / Vairables */
+
+html,
+body {
+  height: 100%;
+  background-color: $background-color;
+  color: $white;
+  font-family: $font-family;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container {
+    width: 55%;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 992px) {
+      width: 80%;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .btn {
+      font-size: $button-font-size;
+      font-weight: 500;
+      height: 45px;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.5);
+      transition: 330ms all;
+      padding: 0 50px;
+      background-color: $button-bg;
+      color: $success;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+    }
+
+    .btn-start {
+      font-size: 28px;
+      padding: 0 50px;
+      background-color: $bg-start-button;
+      color: $button-bg;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      letter-spacing: 5px;
+
+      &:hover {
+        background-color: $button-bg;
+        color: $success;
+      }
+    }
+
+    fieldset {
+      padding-bottom: 20px;
+
+      legend {
+        font-size: $legend-font-size;
+        color: $legend-color;
+        padding-bottom: 15px;
+      }
+
+      textarea,
+      select,
+      input {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        color: $white;
+        border-bottom: 1px solid $border-color;
+        font-size: $placeholder-font-size;
+        padding: 0 15px 0 15px;
+
+        &:focus {
+          border-bottom: 1px solid $white;
+        }
+      }
+
+      &:valid + button {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+
+      input[type="password"] {
+        color: $success;
+      }
+
+      textarea {
+        height: auto;
+        resize: none;
+      }
+
+      select {
+        appearance: none;
+        cursor: pointer;
+        background: url(../img/icons/down-arrow.svg) no-repeat calc(100% - 15px);
+
+        &:focus {
+          background-color: $background-color;
+          color: $white;
+        }
+      }
+
+      .upload-file {
+        .text {
+          display: flex;
+          height: 50px;
+          align-items: center;
+          border: 1px solid rgba(#fff, 0.5);
+          border-radius: 3px;
+          margin-bottom: 10px;
+          padding: 0 14px;
+          cursor: pointer;
+          font-size: 20px;
+          &:hover {
+            border-color: #fff;
+          }
+          &::before {
+            content: attr(data-invalid);
+          }
+        }
+        input {
+          display: none;
+          &:valid + .text {
+            border-color: $success;
+            background: url(../img/icons/checked.svg) no-repeat
+              calc(100% - 15px) rgba($success, 0.1);
+            background-size: 25px;
+            &::before {
+              content: attr(data-valid);
+            }
+          }
+        }
+      }
+
+      .radio {
+        .text {
+          display: flex;
+          height: 50px;
+          background-color: $background-color;
+          color: $white;
+          margin-bottom: 15px;
+          align-items: center;
+          border: 1px solid $border-color;
+          border-radius: 3px;
+          cursor: pointer;
+          align-items: center;
+          padding: 0 7px;
+          font-size: $radio-font-size;
+
+          .key {
+            width: 36px;
+            height: 36px;
+            background-color: $dark-blue;
+            border: 1px solid $border-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+          }
+        }
+        input {
+          display: none;
+          &:checked + .text {
+            border-color: $success;
+            background: rgba($success, 0.1);
+
+            .key {
+              border-color: $success;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.welcome-screen,
+.end-screen {
+  text-align: center;
+
+  img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-container {
+    max-width: 450px;
+  }
+}
